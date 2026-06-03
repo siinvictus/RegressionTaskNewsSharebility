@@ -1,19 +1,65 @@
-# RegressionTaskNewsSharebility
-The aim of this report is to provide an approach to  building a regression pipeline to predict the shareability of news  in a given dataset. In particular, we perform an extensive analysis  of all the possible steps to follow in the design of the regression  model. We explore a wide variety of models  and preprocessing techniques.
+# News Shareability Prediction
+### Regression Task
 
+## Overview
+This project builds a **regression pipeline to predict the shareability of online news articles** based on their features. The work follows an extensive analysis of preprocessing techniques and model selection, comparing multiple approaches to minimise prediction error.
 
-# Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+Report title: *"If it doesn't spread, it's dead"*
 
-This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. 
-To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+## Approach
 
-You are free to:
-- Share — copy and redistribute the material in any medium or format
-- Adapt — remix, transform, and build upon the material
+### Exploratory Data Analysis
+- Automated EDA report generated with SweetViz (`sweet_report.html`)
+- Distribution analysis, correlation matrix, feature importance exploration
+- Identification of relevant predictors of shareability
 
-Under the following terms:
-- Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-- NonCommercial — You may not use the material for commercial purposes.
+### Preprocessing
+- Feature selection and engineering
+- Handling of skewed distributions
+- Scaling and transformation strategies
 
-No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+### Models Tested
+A wide variety of regression models evaluated and compared:
+- Linear Regression, Lasso, Ridge
+- Decision Tree Regressor
+- Random Forest Regressor
+- Gradient Boosting variants
 
+### Pipeline
+Built with **Scikit-learn** pipelines integrating preprocessing and model steps for clean, reproducible experimentation.
+
+## Repository Structure
+```
+RegressionTaskNewsSharebility/
+├── Report.ipynb              ← full analysis and modelling notebook
+├── sweet_report.html         ← automated EDA report (open in browser)
+├── Submission.csv            ← final predictions
+├── requirements.txt          ← Python dependencies
+└── Report_If it doesn't spread_ it's dead.pdf  ← full project report
+```
+
+## How to Run
+
+```bash
+# Clone the repo
+git clone https://github.com/siinvictus/RegressionTaskNewsSharebility.git
+cd RegressionTaskNewsSharebility
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Open EDA report
+open sweet_report.html   # or just drag into browser
+
+# Run notebook
+jupyter notebook Report.ipynb
+```
+
+## Tech Stack
+Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, SweetViz, Jupyter
+
+## Authors
+Silva Bashllari & collaborators — Politecnico di Torino Course
+
+## License
+[Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/)
